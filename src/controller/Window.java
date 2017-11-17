@@ -226,6 +226,7 @@ public class Window {
 		}
 	}
 	public void closeAllWindow() {
+		Main.taskBook.stopThread();
 		System.exit(0);
 	}
 }

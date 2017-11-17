@@ -5,11 +5,12 @@ import java.util.ArrayList;
 public class TaskBook implements Runnable {
 	private static ArrayList<Task> taskList = new ArrayList<>();
 	public static synchronized ArrayList<Task> getTaskList () { return taskList; }
+	private boolean isActive = true;
 
 	@Override
 	public void run () {
 		try {
-			while (true) {
+			while (isActive) {
 				for (Task task : getTaskList()) {
 					if (task == null)
 						throw new Log (LogUnit.TypeLog.ERROR, this.getClass().getName() + " | Задача не сущетсвует");
@@ -27,6 +28,9 @@ public class TaskBook implements Runnable {
 		}
 	}
 
+	public void stopThread () {
+		isActive = false;
+	}
 	public boolean add (Task task) {
 		if (task != null)
 			if (getTaskList().add(task))
