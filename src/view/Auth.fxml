@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200" minWidth="250" prefHeight="200" prefWidth="250" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Auth">
+    <rowConstraints>
+        <RowConstraints maxHeight="35" minHeight="35" vgrow="SOMETIMES" valignment="CENTER"/>
+        <RowConstraints maxHeight="35" minHeight="35" vgrow="SOMETIMES" valignment="CENTER" />
+        <RowConstraints vgrow="SOMETIMES" valignment="CENTER" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" halignment="CENTER"/>
+        <ColumnConstraints hgrow="SOMETIMES" halignment="CENTER" />
+        <ColumnConstraints hgrow="SOMETIMES" halignment="CENTER" />
+    </columnConstraints>
+    <children>
+        <Label text="Выберете биржу" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <ChoiceBox fx:id="selectExchange" prefWidth="130" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <AnchorPane fx:id="includeAuthForm" GridPane.columnIndex="1" GridPane.rowIndex="3" minHeight="100"/>
+    </children>
+</GridPane>

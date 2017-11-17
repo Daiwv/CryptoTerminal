@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="generalGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="320" minWidth="450" prefHeight="320" prefWidth="450" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Window">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="25" minHeight="25" vgrow="SOMETIMES" />
+      <RowConstraints vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <MenuBar GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <menus>
+            <Menu text="Окно">
+               <Menu fx:id="menuItemWindowChange" text="Тип таблицы" />
+               <SeparatorMenuItem />
+               <MenuItem onAction="#createNewWindow" text="Создать новое" accelerator="Ctrl+N" />
+               <MenuItem onAction="#closeAllWindow" text="Закрыть все окна" accelerator="Ctrl+Shift+X"/>
+            </Menu>
+            <Menu fx:id="menuItemExchangeList" text="Биржа" />
+            <Menu fx:id="menuItemToolList" text="Инструмент" />
+            <Menu text="Задачи">
+               <items>
+                  <MenuItem text="Список задач" accelerator="Alt+T" onAction="#taskListWin" />
+                  <MenuItem text="Создать задачу" onAction="#taskCreateWin" />
+               </items>
+            </Menu>
+            <Menu text="Настройки">
+               <items>
+                  <MenuItem text="Авторизация" onAction="#openAuthWin"/>
+                  <SeparatorMenuItem />
+                  <Menu text="Язык">
+                     <items>
+                        <MenuItem text="English" />
+                        <MenuItem text="Русский" />
+                        <MenuItem text="Український" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <GridPane fx:id="typeWindowInclude" GridPane.columnIndex="0" GridPane.rowIndex="1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="320" minWidth="450" prefHeight="320" prefWidth="450" xmlns:fx="http://javafx.com/fxml" />
+   </children>
+</GridPane>

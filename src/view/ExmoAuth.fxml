@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200" minWidth="250" prefHeight="200" prefWidth="250" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ExmoAuth">
+    <rowConstraints>
+        <RowConstraints maxHeight="35" minHeight="35" vgrow="SOMETIMES" valignment="CENTER" />
+        <RowConstraints maxHeight="35" minHeight="35" vgrow="SOMETIMES" valignment="CENTER" />
+        <RowConstraints maxHeight="35" minHeight="35" vgrow="SOMETIMES" valignment="CENTER" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" halignment="CENTER" />
+        <ColumnConstraints hgrow="SOMETIMES" halignment="CENTER" />
+        <ColumnConstraints hgrow="SOMETIMES" halignment="CENTER" />
+    </columnConstraints>
+    <children>
+        <Label fx:id="nameExchange" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" />
+        <Label text="Key" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="keyExmo" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="secExmo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Sec" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Button text="Войти" onAction="#entranceMethod" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    </children>
+</GridPane>
+
